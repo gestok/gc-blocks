@@ -1,0 +1,47 @@
+#horizontal-draggable-link-cards-1 {
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    min-height: 250px;
+    overflow: hidden;
+    padding:10px;
+}
+
+#horizontal-draggable-link-cards-1 .box {
+    display:grid;
+    position:relative;
+    overflow:hidden;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    box-shadow:0px 4px 8px -2px #0005;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    transition: all .4s ease;
+}
+
+#horizontal-draggable-link-cards-1 .box:hover {
+    background-size: auto 110%;
+    transition: all .4s ease;
+}
+
+#horizontal-draggable-link-cards-1 .box .title {
+    position:absolute;
+    bottom:0;
+    left:0;
+    margin:0;
+    padding: 2px 10px;
+    background: #fff2;
+    text-transform:uppercase;
+    z-index:1;
+    transition: all .4s ease;
+}
+
+#horizontal-draggable-link-cards-1 .box:hover .title {
+    background: #fff6;
+    transition: all .4s ease;
+}
