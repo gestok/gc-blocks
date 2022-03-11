@@ -94,6 +94,29 @@ function gcb_register_blocks() {
 			],
 		],
 	));
+	
+	// Simple Category Product Carousel
+	acf_register_block_type( array(
+		'name'				=> 'smpl-cat-prd-crsl',
+		'title'				=> __( 'Simple Category Product Carousel', 'smpl-cat-prd-crsl' ),
+		'description'		=> __('Simple product carousel that displays products from a specific category.'),
+		'render_template'	=> plugin_dir_path(__FILE__) . 'blocks/woocommerce/smpl-cat-prd-crsl.php',
+		'enqueue_assets'	=> function(){
+			wp_enqueue_style( 'smpl-cat-prd-crsl-css', plugin_dir_url(__FILE__) . 'blocks/woocommerce/smpl-cat-prd-crsl.css');
+			wp_enqueue_script('smpl-cat-prd-crsl-js', plugin_dir_url(__FILE__) . 'blocks/woocommerce/smpl-cat-prd-crsl.js');
+		},
+		'category'			=> 'gc-blocks',
+		'icon'				=> 'admin-users',
+		'mode'				=> 'edit',
+		'keywords'			=> array( 'products', 'carousel', 'category' ),
+		'styles'			=> [
+			[
+				'name' => 'default',
+				'label' => __('Default', 'default'),
+				'isDefault' => true,
+			],
+		],
+	));
 
 }
 add_action('acf/init', 'gcb_register_blocks' );
