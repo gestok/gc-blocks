@@ -1,0 +1,144 @@
+#gcb-simple-slider {
+    position: relative;
+    height: 80vh;
+}
+
+#gcb-simple-slider #previous,
+#gcb-simple-slider #next {
+    position:absolute;
+    color:#0004;
+    height:100%;
+    width:100px;
+    z-index: 99;
+    cursor:pointer;
+	outline: none;
+    padding:0;
+    margin:0;
+    font-size:60px;
+    border:0;
+    top:0;
+    background:transparent;
+    transition: all .4s ease;
+}
+
+#gcb-simple-slider #previous:hover,
+#gcb-simple-slider #next:hover {
+    color: #0008;
+    transition: all .4s ease;
+}
+
+#gcb-simple-slider #previous,
+#gcb-simple-slider #previous svg {
+    left:0;
+}
+
+#gcb-simple-slider #next,
+#gcb-simple-slider #next svg {
+    right: 0;
+}
+
+#gcb-simple-slider #previous svg,
+#gcb-simple-slider #next svg {
+    fill: #fff;
+    border: solid 2px #fff2;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+#gcb-simple-slider #previous:hover svg {
+    left: 20px;
+    opacity: 1;
+    transition: all .4s ease;
+}
+
+#gcb-simple-slider #next:hover svg {
+    right: 20px;
+    opacity: 1;
+    transition: all .4s ease;
+}
+
+#gcb-simple-slider #previous::before {
+    content:"";
+    position:absolute;
+    left:0;
+    top: 10%;
+    height: 80%;
+    width: 100%;
+    background-image: radial-gradient(#2226, #0000 65%);
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    background-position: -100px 0%;
+    z-index:-1;
+    opacity:0;
+    transition: all .4s ease;
+}
+
+#gcb-simple-slider #next::before {
+    content:"";
+    position:absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 100%;
+    background-image: radial-gradient(#2226, #0000 65%);
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0%;
+    z-index: -1;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+#gcb-simple-slider #previous:hover::before,
+#gcb-simple-slider #next:hover::before {
+    opacity: 1;
+    transition: all .4s ease;
+}
+
+#gcb-simple-slider #slides {
+    overflow: hidden;
+}
+
+#gcb-simple-slider #slides a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 90;
+}
+
+#gcb-simple-slider #slides a.slideActive {
+    z-index: 2;
+    opacity: 1;
+    transition: 1s;
+}
+
+.progressbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background: none;
+    z-index: 100;
+}
+
+.progress {
+    border-radius: 50px;
+    width: 100%;
+    height: 10px;
+    -webkit-animation: progress 8s infinite;
+    background: linear-gradient(90deg, #9990, #222c);
+}
+
+
+@-webkit-keyframes progress {
+    0% {width: 0%;},
+    100% {width: 100%;}
+}
