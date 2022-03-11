@@ -68,5 +68,32 @@ function gcb_register_blocks() {
 		],
 	));
 
+	// Expanding Cards
+	acf_register_block_type( array(
+		'name'				=> 'exp-cards',
+		'title'				=> __( 'Expanding Cards', 'exp-cards' ),
+		'description'		=> __('Expanding flex info cards with title, description and icon.'),
+		'render_template'	=> plugin_dir_path(__FILE__) . 'blocks/cards/expanding-cards.php',
+		'enqueue_assets'	=> function(){
+			wp_enqueue_style( 'exp-cards-css', plugin_dir_url(__FILE__) . 'blocks/cards/expanding-cards.css');
+			wp_enqueue_script('exp-cards-js', plugin_dir_url(__FILE__) . 'blocks/cards/expanding-cards.js');
+		},
+		'category'			=> 'gc-blocks',
+		'icon'				=> 'admin-users',
+		'mode'				=> 'edit',
+		'keywords'			=> array( 'cards', 'expanding', 'info' ),
+		'styles'			=> [
+			[
+				'name' => 'default',
+				'label' => __('Default', 'default'),
+				'isDefault' => true,
+			],
+			[
+				'name' => 'square',
+				'label' => __('Square', 'square'),
+			],
+		],
+	));
+
 }
 add_action('acf/init', 'gcb_register_blocks' );

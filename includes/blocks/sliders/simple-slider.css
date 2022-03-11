@@ -1,10 +1,11 @@
-#gcb-simple-slider {
+.gcb-simple-slider {
     position: relative;
     height: 80vh;
 }
 
-#gcb-simple-slider #previous,
-#gcb-simple-slider #next {
+.gcb-simple-slider button.previous,
+.gcb-simple-slider button.next,
+.gcb-simple-slider button:not(:hover):not(:active) {
     position:absolute;
     color:#0004;
     height:100%;
@@ -18,27 +19,27 @@
     border:0;
     top:0;
     background:transparent;
-    transition: all .4s ease;
+	transition: all .4s ease;
 }
 
-#gcb-simple-slider #previous:hover,
-#gcb-simple-slider #next:hover {
+.gcb-simple-slider button.previous:hover,
+.gcb-simple-slider button.next:hover {
     color: #0008;
     transition: all .4s ease;
 }
 
-#gcb-simple-slider #previous,
-#gcb-simple-slider #previous svg {
+.gcb-simple-slider button.previous,
+.gcb-simple-slider button.previous svg {
     left:0;
 }
 
-#gcb-simple-slider #next,
-#gcb-simple-slider #next svg {
+.gcb-simple-slider button.next,
+.gcb-simple-slider button.next svg {
     right: 0;
 }
 
-#gcb-simple-slider #previous svg,
-#gcb-simple-slider #next svg {
+.gcb-simple-slider button.previous svg,
+.gcb-simple-slider button.next svg {
     fill: #fff;
     border: solid 2px #fff2;
     border-radius: 50%;
@@ -49,19 +50,19 @@
     transition: all .4s ease;
 }
 
-#gcb-simple-slider #previous:hover svg {
+.gcb-simple-slider button.previous:hover svg {
     left: 20px;
     opacity: 1;
     transition: all .4s ease;
 }
 
-#gcb-simple-slider #next:hover svg {
+.gcb-simple-slider button.next:hover svg {
     right: 20px;
     opacity: 1;
     transition: all .4s ease;
 }
 
-#gcb-simple-slider #previous::before {
+.gcb-simple-slider button.previous::before {
     content:"";
     position:absolute;
     left:0;
@@ -77,7 +78,7 @@
     transition: all .4s ease;
 }
 
-#gcb-simple-slider #next::before {
+.gcb-simple-slider button.next::before {
     content:"";
     position:absolute;
     left: 0;
@@ -93,17 +94,17 @@
     transition: all .4s ease;
 }
 
-#gcb-simple-slider #previous:hover::before,
-#gcb-simple-slider #next:hover::before {
+.gcb-simple-slider button.previous:hover::before,
+.gcb-simple-slider button.next:hover::before {
     opacity: 1;
     transition: all .4s ease;
 }
 
-#gcb-simple-slider #slides {
+.gcb-simple-slider .slides {
     overflow: hidden;
 }
 
-#gcb-simple-slider #slides a {
+.gcb-simple-slider .slides a {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,7 +115,7 @@
     z-index: 90;
 }
 
-#gcb-simple-slider #slides a.slideActive {
+.gcb-simple-slider .slides a.slideActive {
     z-index: 2;
     opacity: 1;
     transition: 1s;

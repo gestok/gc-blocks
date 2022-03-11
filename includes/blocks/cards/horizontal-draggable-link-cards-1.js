@@ -1,6 +1,6 @@
 function horizontalDraggableLinkCards1(){
 
-    const slider = document.getElementById("horizontal-draggable-link-cards-1");
+    let wrappers = document.querySelectorAll(".gcb-horizontal-draggable-link-cards-1");
     const preventClick = (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
@@ -11,39 +11,44 @@ function horizontalDraggableLinkCards1(){
     let startX;
     let scrollLeft;
 
-    slider.addEventListener("mousedown", e => {
-        isDown = true;
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
+	for (let i=0; i<wrappers.length; i++){
 
-    slider.addEventListener("mouseleave", () => {
-        isDown = false;
-    });
+		wrappers.item(i).addEventListener("mousedown", e => {
+			console.log('hi');
+			isDown = true;
+			startX = e.pageX - wrappers.item(i).offsetLeft;
+			scrollLeft = wrappers.item(i).scrollLeft;
+		});
 
-    slider.addEventListener("mouseup", e => {
-        isDown = false;
-        const elements = document.getElementsByClassName("box");
-        if(isDragged){
-            for(let i = 0; i<elements.length; i++){
-                elements[i].addEventListener("click", preventClick);
-            }
-        } else {
-            for(let i = 0; i<elements.length; i++){
-                elements[i].removeEventListener("click", preventClick);
-            }
-        }
-        isDragged = false;
-    });
+		wrappers.item(i).addEventListener("mouseleave", () => {
+			isDown = false;
+		});
 
-    slider.addEventListener("mousemove", e => {
-        if (!isDown) return;
-        isDragged =  true;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
-    });
+		wrappers.item(i).addEventListener("mouseup", e => {
+			isDown = false;
+			const elements = document.getElementsByClassName("box");
+			if(isDragged){
+				for(let i = 0; i<elements.length; i++){
+					elements[i].addEventListener("click", preventClick);
+				}
+			} else {
+				for(let i = 0; i<elements.length; i++){
+					elements[i].removeEventListener("click", preventClick);
+				}
+			}
+			isDragged = false;
+		});
+
+		wrappers.item(i).addEventListener("mousemove", e => {
+			if (!isDown) return;
+			isDragged =  true;
+			e.preventDefault();
+			const x = e.pageX - wrappers.item(i).offsetLeft;
+			const walk = (x - startX) * 2;
+			wrappers.item(i).scrollLeft = scrollLeft - walk;
+		});
+
+	}
 
 }
 

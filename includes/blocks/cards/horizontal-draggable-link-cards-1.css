@@ -1,4 +1,4 @@
-#horizontal-draggable-link-cards-1 {
+.gcb-horizontal-draggable-link-cards-1 {
     position:relative;
     display:flex;
     flex-direction:row;
@@ -10,7 +10,8 @@
     padding:10px;
 }
 
-#horizontal-draggable-link-cards-1 .box {
+.gcb-horizontal-draggable-link-cards-1 a.box {
+    outline: none!important;
     display:grid;
     position:relative;
     overflow:hidden;
@@ -18,18 +19,9 @@
     min-width: 300px;
     height: 300px;
     box-shadow:0px 4px 8px -2px #0005;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
-    transition: all .4s ease;
 }
 
-#horizontal-draggable-link-cards-1 .box:hover {
-    background-size: auto 110%;
-    transition: all .4s ease;
-}
-
-#horizontal-draggable-link-cards-1 .box .title {
+.gcb-horizontal-draggable-link-cards-1 a.box .title {
     position:absolute;
     bottom:0;
     left:0;
@@ -41,7 +33,7 @@
     transition: all .4s ease;
 }
 
-#horizontal-draggable-link-cards-1 .box:hover .title {
+.gcb-horizontal-draggable-link-cards-1 a.box:hover .title {
     background: #fff6;
     transition: all .4s ease;
 }
