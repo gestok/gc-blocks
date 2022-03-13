@@ -20,6 +20,34 @@
     transition: 0.3s left ease-in-out;
 }
 
+.gcb-smpl-cat-prd-crsl .product-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.gcb-smpl-cat-prd-crsl .product-box .cart-btn {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 18px;
+    right: 10px;
+    background: #fafafa;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px #0005;
+    transition: all .4s ease;
+}
+
+.gcb-smpl-cat-prd-crsl .product-box:hover > .cart-btn {
+    opacity: 1;
+    visibility: visible;
+    right: 22px;
+}
+
 .gcb-smpl-cat-prd-crsl .product {
     display: grid;
     padding: 0.5rem;
@@ -39,7 +67,7 @@
 }
 
 .gcb-smpl-cat-prd-crsl .product img {
-    min-width: calc(200px - 1rem);
+    width: calc(200px - 1rem);
     max-height: 200px;
     min-height: 200px;
     object-fit: cover;

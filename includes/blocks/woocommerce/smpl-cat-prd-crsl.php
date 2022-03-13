@@ -113,11 +113,18 @@ if ($values_exist){
 			foreach ($product_ids as $product_id){
 				// Get object of product
 				$product = wc_get_product($product_id); ?>
-				<a class="product" href="<?php echo get_permalink($product->get_id()); ?>" role="link" title="product">
-					<?php echo $product->get_image(); ?>
-					<p class="title"><?php echo $product->get_name(); ?></p>
-					<p class="price"><?php echo round($product->get_price(), 2); ?>€</p>
-				</a> <?php
+				<div class="product-box">
+					<a class="product" href="<?php echo get_permalink($product->get_id()); ?>" role="link" title="product">
+						<?php echo $product->get_image(); ?>
+						<p class="title"><?php echo $product->get_name(); ?></p>
+						<p class="price"><?php echo round($product->get_price(), 2); ?>€</p>
+					</a>
+					<a href="/?add-to-cart=<?php echo $product_id; ?>" class="cart-btn">
+						<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#333333">
+							<path d="M18 6h-2a4 4 0 1 0-8 0H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/>
+						</svg>
+					</a>
+				</div> <?php
 			} ?>
 			</div>
 			<button class="ctrl-btn pro-prev">
