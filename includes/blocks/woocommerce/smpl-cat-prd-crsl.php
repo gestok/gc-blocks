@@ -32,38 +32,32 @@ $order_by = get_field('order_by');
 $order = get_field('order');
 $stock_status = get_field('stock_status');
 
-/*
- * Function to determine if all the values are set
- * @params string
- * @return boolean
-*/
-function valuesExist($criteria){
-	switch ($criteria) {
-		case 'sku':
-			if (!empty($sku)) return TRUE;
-			break;
-		case 'tag':
-			if (!empty($tag)) return TRUE;
-			break;
-		case 'category':
-			if (!empty($cat)) return TRUE;
-			break;
-		case 'weight':
-			if (!empty($weight)) return TRUE;
-			break;
-		case 'price':
-			if (!empty($price)) return TRUE;
-			break;
-		case 'total_sales':
-			if (!empty($t_sales)) return TRUE;
-			break;
-	}
-	// Invalid or empty info provided
-	return FALSE;
+
+// Check if values are set
+$values_exist = false;
+switch ($show_criteria) {
+	case 'sku':
+		if (!empty($sku)) $values_exist = true;
+		break;
+	case 'tag':
+		if (!empty($tag)) $values_exist = true;
+		break;
+	case 'category':
+		if (!empty($cat)) $values_exist = true;
+		break;
+	case 'weight':
+		if (!empty($weight)) $values_exist = true;
+		break;
+	case 'price':
+		if (!empty($price)) $values_exist = true;
+		break;
+	case 'total_sales':
+		if (!empty($t_sales)) $values_exist = true;
+		break;
 }
 
 
-if (valuesExist($show_criteria)){
+if ($values_exist){
 
     // https://github.com/woocommerce/woocommerce/wiki/wc_get_products-and-WC_Product_Query
     $args = array(
