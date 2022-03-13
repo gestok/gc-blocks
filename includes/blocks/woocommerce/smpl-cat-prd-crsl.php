@@ -68,7 +68,7 @@ if (valuesExist($show_criteria)){
     // https://github.com/woocommerce/woocommerce/wiki/wc_get_products-and-WC_Product_Query
     $args = array(
         'limit'			=> intval($count),
-		'visibility'	=> 'visible',
+	'visibility'		=> 'visible',
         'return'		=> 'ids',
     );
 
