@@ -12,7 +12,7 @@ $id = 'gcb-exp-cards-' . $block['id'];
 if(!empty($block['anchor'])) $id = $block['anchor'];
 
 
-// Create Class attributes
+// // Create Class attributes
 $className = 'gcb-exp-cards';
 if(!empty($block['className'])) $className .= ' ' . $block['className'];
 if(!empty($block['align'])) $className .= ' align' . $block['align'];

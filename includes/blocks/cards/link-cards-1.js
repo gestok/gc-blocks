@@ -15,7 +15,6 @@ function linkCards1(){
 
 	for (let i = 0; i < wrappers.length; i++) {
 		wrappers.item(i).addEventListener("mousedown", e => {
-			console.log('working');
 			isDown = true;
 			startX = e.pageX - wrappers.item(i).offsetLeft;
 			scrollLeft = wrappers.item(i).scrollLeft;
