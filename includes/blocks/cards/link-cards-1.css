@@ -30,6 +30,12 @@
     }
 }
 
+@media (max-width: 780px) {
+    .gcb-link-cards-1 {
+        overflow-x: scroll;
+    }
+}
+
 .gcb-link-cards-1 .card:before {
     content: "";
     position: absolute;

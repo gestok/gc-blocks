@@ -37,3 +37,9 @@
     background: #fff6;
     transition: all .4s ease;
 }
+
+@media screen and (max-width: 780px){
+    .gcb-horizontal-draggable-link-cards-1 {
+        overflow-x: scroll;
+    }
+}
