@@ -120,8 +120,16 @@ if ($values_exist){
 				</a> <?php
 			} ?>
 			</div>
-			<button class="ctrl-btn pro-prev">Prev</button>
-			<button class="ctrl-btn pro-next">Next</button>
+			<button class="ctrl-btn pro-prev">
+				<svg height="36px" viewBox="0 0 24 24" width="36px" fill="#000000">
+					<path d="M0 0h24v24H0V0z" fill="none"></path><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"></path>
+				</svg>
+			</button>
+			<button class="ctrl-btn pro-next">
+				<svg height="36px" viewBox="0 0 24 24" width="36px" fill="#000000">
+					<path d="M0 0h24v24H0V0z" fill="none"></path><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"></path>
+				</svg>
+			</button>
 		</section> <?php
 
 	}
