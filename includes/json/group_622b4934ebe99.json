@@ -23,32 +23,69 @@
             "label": "Product Count",
             "name": "prd_count",
             "type": "number",
-            "instructions": "How many products should the carousel show?",
-            "required": 0,
+            "instructions": "How many products should the carousel show? (-1 for all the products)",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": 6,
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
+            "min": 1,
             "max": "",
             "step": 1
+        },
+        {
+            "key": "field_622dfa7a5fa12",
+            "label": "Show Criteria",
+            "name": "show_criteria",
+            "type": "select",
+            "instructions": "Select the criteria that products should meet",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "sku": "SKU",
+                "tag": "Tag",
+                "category": "Category",
+                "weight": "Weight",
+                "price": "Price",
+                "total_sales": "Total Sales"
+            },
+            "default_value": "category",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_622b49d0db903",
             "label": "Category Slug",
             "name": "cat_slug",
             "type": "text",
-            "instructions": "What is the slug of the product category from which the carousel will show items?",
-            "required": 0,
-            "conditional_logic": 0,
+            "instructions": "What is the slug of the product category from which the carousel will show items? (Insert more than 1 slugs separated with \",\")",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_622dfa7a5fa12",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -57,6 +94,241 @@
             "prepend": "",
             "append": "",
             "maxlength": 50
+        },
+        {
+            "key": "field_622dfcbc5fa14",
+            "label": "Partial SKU",
+            "name": "partial_sku",
+            "type": "text",
+            "instructions": "What is the SKU or part of the SKU of the product from which the carousel will show items?",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_622dfa7a5fa12",
+                        "operator": "==",
+                        "value": "sku"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 50
+        },
+        {
+            "key": "field_622dfd275fa15",
+            "label": "Tag",
+            "name": "tag",
+            "type": "text",
+            "instructions": "What is the Tag of the product from which the carousel will show items? (Insert more than 1 tags separated with \",\")",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_622dfa7a5fa12",
+                        "operator": "==",
+                        "value": "tag"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 50
+        },
+        {
+            "key": "field_622dfdb55fa16",
+            "label": "Weight",
+            "name": "weight",
+            "type": "number",
+            "instructions": "What is the Weight of the product from which the carousel will show items?",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_622dfa7a5fa12",
+                        "operator": "==",
+                        "value": "weight"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_622dfe195fa17",
+            "label": "Price",
+            "name": "price",
+            "type": "number",
+            "instructions": "What is the Price of the product from which the carousel will show items?",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_622dfa7a5fa12",
+                        "operator": "==",
+                        "value": "price"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_622dfe555fa18",
+            "label": "Total Sales",
+            "name": "total_sales",
+            "type": "number",
+            "instructions": "Show the products with a specific amount of total sales.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_622dfa7a5fa12",
+                        "operator": "==",
+                        "value": "total_sales"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_622df89a5fa0f",
+            "label": "Offset",
+            "name": "offset",
+            "type": "number",
+            "instructions": "Set the starting point of the products. E.g. \"offset 1\" will show 2nd product and onwards.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_622df9c55fa11",
+            "label": "Order By",
+            "name": "order_by",
+            "type": "select",
+            "instructions": "Order products by a specific criteria.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "ID": "ID Number",
+                "name": "Name",
+                "type": "Type",
+                "rand": "Random",
+                "date": "Date",
+                "modified": "Modified Date"
+            },
+            "default_value": "date",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_622df92e5fa10",
+            "label": "Order",
+            "name": "order",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "ASC": "Ascending",
+                "DESC": "Descending"
+            },
+            "default_value": "DESC",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_622dfc065fa13",
+            "label": "Stock Status",
+            "name": "stock_status",
+            "type": "true_false",
+            "instructions": "Show only products in stock?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -77,5 +349,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1647004194
+    "modified": 1647187888
 }

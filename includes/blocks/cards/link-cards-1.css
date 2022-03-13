@@ -2,7 +2,7 @@
     display:flex;
     gap:1.5rem;
 	overflow: hidden;
-	padding: 4px 10px 1.5rem 10px;
+	padding: 4px 0px 1.5rem 0px;
 }
 
 .gcb-link-cards-1 .card {
