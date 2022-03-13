@@ -53,24 +53,41 @@
     overflow: hidden;
 }
 
+.gcb-smpl-cat-prd-crsl .product p.price {
+    font-weight: 600;
+    font-size: 15px;
+}
+
 .gcb-smpl-cat-prd-crsl .ctrl-btn {
-    padding: 20px 20px;
-    min-width: 50px;
-    background: #fff;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff!important;
+    box-shadow: 0 4px 4px #0005;
+    border-radius: 50%;
+    opacity: 0;
     border: none;
     cursor: pointer;
     outline: none;
     position: absolute;
     top: 50%;
-    margin-top: -27.5px;
+    transform: translateY(-50%);
+    transition: all .4s ease;
 }
 
 .gcb-smpl-cat-prd-crsl .ctrl-btn.pro-prev {
-    left: 0;
+    left: 10px;
 }
 
 .gcb-smpl-cat-prd-crsl .ctrl-btn.pro-next {
-    right: 0;
+    right: 10px;
+}
+
+.gcb-smpl-cat-prd-crsl:hover .ctrl-btn {
+    opacity: 1;
 }
 
 @media only screen and (max-width: 480px){

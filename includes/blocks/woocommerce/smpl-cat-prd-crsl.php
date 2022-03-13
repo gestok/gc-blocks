@@ -116,7 +116,7 @@ if ($values_exist){
 				<a class="product" href="<?php echo get_permalink($product->get_id()); ?>" role="link" title="product">
 					<?php echo $product->get_image(); ?>
 					<p class="title"><?php echo $product->get_name(); ?></p>
-					<p class="price"><?php echo $product->get_price(); ?>€</p>
+					<p class="price"><?php echo round($product->get_price(), 2); ?>€</p>
 				</a> <?php
 			} ?>
 			</div>
