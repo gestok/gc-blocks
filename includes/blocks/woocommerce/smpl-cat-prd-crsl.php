@@ -69,7 +69,6 @@ if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
 		'status'		=> 'publish',
 		'limit'			=> intval($count),
 		'visibility'	=> 'visible',
-		'backorders'	=> strval($backorders),
 		'return'		=> 'ids',
     );
 
@@ -109,6 +108,13 @@ if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
 	// Stock Status
 	if ($stock_status)
 		$args['stock_status'] = 'instock';
+
+	if ($backorders == 'no')
+		$args['backorders'] = 'no';
+	elseif ($backorders == 'yes')
+		$args['backorders'] = 'yes';
+	else
+		$args['backorders'] = 'notify';
 
     $product_ids = wc_get_products($args);
 
