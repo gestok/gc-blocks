@@ -6,6 +6,7 @@
  * @since        1.0.5
 **/
 
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 // Create unique ID
 $id = 'gcb-smpl-cat-prd-crsl-' . $block['id'];
@@ -57,7 +58,7 @@ switch ($show_criteria) {
 }
 
 
-if ($values_exist && class_exists('WooCommerce')){
+if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
 
     // https://github.com/woocommerce/woocommerce/wiki/wc_get_products-and-WC_Product_Query
     $args = array(

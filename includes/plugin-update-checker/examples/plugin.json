@@ -1,0 +1,8 @@
+{
+	"name": "GC Blocks",
+	"version": "1.0.5",
+	"download_url": "http://example.com/updates/example-plugin.zip",
+	"sections": {
+		"description": "Extends Wordpress Gutenberg editor with ACF Pro powered Blocks."
+	}
+}
