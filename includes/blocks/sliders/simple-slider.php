@@ -56,7 +56,7 @@ if(have_rows('simple_slider')):
 
 			<style>
 				#<?php echo esc_attr($id); ?> .slide<?php echo $i; ?> {
-					background: url('<?php echo $img; ?>');
+					background: url('<?php echo $img; ?>') center center / 100% auto no-repeat;
 				}
 			</style>
 			<a class="slide<?php echo $i; ?> slideActive" href="<?php echo $url; ?>"></a>
