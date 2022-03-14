@@ -57,7 +57,7 @@ switch ($show_criteria) {
 }
 
 
-if ($values_exist){
+if ($values_exist && class_exists('WooCommerce')){
 
     // https://github.com/woocommerce/woocommerce/wiki/wc_get_products-and-WC_Product_Query
     $args = array(
