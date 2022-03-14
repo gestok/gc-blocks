@@ -12,12 +12,14 @@
 
 if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+define( 'GC_BLOCKS', plugin_dir_path( __FILE__ ));
+
 // Check if ACF Classes exists
 if (!class_exists('acf_pro') || !class_exists('acf')){
 
     // Define path and URL to the ACF plugin.
-    define( 'MY_ACF_PATH', plugin_dir_path( __FILE__ ) . '/includes/acf/' );
-    define( 'MY_ACF_URL', plugin_dir_url( __FILE__ ) . '/includes/acf/' );
+    define( 'MY_ACF_PATH', plugin_dir_path( __FILE__ ) . 'includes/acf/' );
+    define( 'MY_ACF_URL', plugin_dir_url( __FILE__ ) . 'includes/acf/' );
 
     // Include the ACF plugin.
     include_once( MY_ACF_PATH . 'acf.php' );
@@ -35,15 +37,34 @@ if (!class_exists('acf_pro') || !class_exists('acf')){
     }
 }
 
+
+// Save JSON to folder
+function set_acf_json_save_folder($path){
+    $path = GC_BLOCKS . 'includes/json/';
+    return $path;
+}
+add_filter('acf/settings/save_json', 'set_acf_json_save_folder');
+
+// Load JSON from folder
+function add_acf_json_load_folder($paths){
+	// Remove original path
+    unset($paths[0]);
+	// Set new path
+    $paths[] = GC_BLOCKS . 'includes/json';
+    return $paths;
+}
+add_filter('acf/settings/load_json', 'add_acf_json_load_folder');
+
+
 // Core Functions
 include(plugin_dir_path(__FILE__) . 'includes/core/gcb_enqueue_block_editor_assets.php');
-include(plugin_dir_path(__FILE__) . 'includes/core/gcb_json_save_load.php');
 include(plugin_dir_path(__FILE__) . 'includes/core/gcb_json_sync.php');
 // Register New Block Category
 include(plugin_dir_path(__FILE__) . 'includes/core/gcb_block_category.php');
 // Register Blocks, JS and CSS
 include(plugin_dir_path(__FILE__) . 'includes/gcb_register_blocks.php');
 include(plugin_dir_path(__FILE__) . 'includes/gcb_register_scripts.php');
+
 
 // Auto-Update from Git Repo
 require(plugin_dir_path(__FILE__) . 'includes/plugin-update-checker/plugin-update-checker.php');
