@@ -3,7 +3,7 @@
  * Plugin Name: GC Blocks
  * Plugin URI: https://georgechond.com/
  * Description: This plugin adds functionality for new custom blocks.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Requires at least: 5.2
  * Requires PHP: 7.4
  * Author: George Chond
