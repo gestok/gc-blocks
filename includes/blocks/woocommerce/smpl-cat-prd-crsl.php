@@ -132,7 +132,7 @@ if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
 					<a class="product" href="<?php echo get_permalink($product->get_id()); ?>" role="link" title="product">
 						<?php echo $product->get_image(); ?>
 						<p class="title"><?php echo $product->get_name(); ?></p>
-						<p class="price"><?php echo round($product->get_price(), 2); ?>€</p>
+						<p class="price"><?php echo sprintf('%.2f', round($product->get_price(), 2)); ?>€</p>
 					</a>
 					<a href="/?add-to-cart=<?php echo $product_id; ?>" class="cart-btn" role="link" title="Add to Cart">
 						<svg xmlns="http://www.w3.org/2000/svg">
