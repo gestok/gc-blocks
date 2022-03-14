@@ -113,7 +113,7 @@ if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
 		$args['backorders'] = 'no';
 	elseif ($backorders == 'yes')
 		$args['backorders'] = 'yes';
-	else
+	elseif ($backorders == 'notify')
 		$args['backorders'] = 'notify';
 
     $product_ids = wc_get_products($args);
