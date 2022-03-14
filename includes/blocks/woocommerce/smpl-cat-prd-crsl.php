@@ -32,6 +32,7 @@ $offset = get_field('offset');
 $order_by = get_field('order_by');
 $order = get_field('order');
 $stock_status = get_field('stock_status');
+$backorders = get_field('backorders');
 
 
 // Check if values are set
@@ -67,6 +68,7 @@ if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
     $args = array(
 		'limit'			=> intval($count),
 		'visibility'	=> 'visible',
+		'backorders'	=> strval($backorders),
 		'return'		=> 'ids',
     );
 
