@@ -66,6 +66,7 @@ if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
 
     // https://github.com/woocommerce/woocommerce/wiki/wc_get_products-and-WC_Product_Query
     $args = array(
+		'status'		=> 'publish',
 		'limit'			=> intval($count),
 		'visibility'	=> 'visible',
 		'backorders'	=> strval($backorders),
