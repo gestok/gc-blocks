@@ -20,7 +20,7 @@ function add_acf_json_load_folder($paths){
     unset($paths[0]);
 
 	// Set new path
-    $paths[] = WP_PLUGIN_DIR . 'gc-blocks/includes/json';
+    $paths[] = WP_PLUGIN_DIR . '/gc-blocks/includes/json';
 
     return $paths;
 }

@@ -37,14 +37,13 @@ if (!class_exists('acf_pro') || !class_exists('acf')){
 
 // Core Functions
 include(plugin_dir_path(__FILE__) . 'includes/core/gcb_enqueue_block_editor_assets.php');
-include_once(plugin_dir_path(__FILE__) . 'includes/core/gcb_json_save_load.php');
-include_once(plugin_dir_path(__FILE__) . 'includes/core/gcb_json_sync.php');
+include(plugin_dir_path(__FILE__) . 'includes/core/gcb_json_save_load.php');
+include(plugin_dir_path(__FILE__) . 'includes/core/gcb_json_sync.php');
 // Register New Block Category
 include(plugin_dir_path(__FILE__) . 'includes/core/gcb_block_category.php');
 // Register Blocks, JS and CSS
 include(plugin_dir_path(__FILE__) . 'includes/gcb_register_blocks.php');
 include(plugin_dir_path(__FILE__) . 'includes/gcb_register_scripts.php');
-
 
 // Auto-Update from Git Repo
 require(plugin_dir_path(__FILE__) . 'includes/plugin-update-checker/plugin-update-checker.php');
