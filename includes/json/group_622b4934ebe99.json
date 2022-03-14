@@ -53,6 +53,7 @@
                 "id": ""
             },
             "choices": {
+                "none": "None",
                 "sku": "SKU",
                 "tag": "Tag",
                 "category": "Category",
@@ -60,7 +61,7 @@
                 "price": "Price",
                 "total_sales": "Total Sales"
             },
-            "default_value": "category",
+            "default_value": "none",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -312,6 +313,22 @@
             "placeholder": ""
         },
         {
+            "key": "field_622f1fbbd59e3",
+            "label": "Extra Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_622dfc065fa13",
             "label": "Stock Status",
             "name": "stock_status",
@@ -329,6 +346,32 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_622f1fd2d59e4",
+            "label": "Show Backorders",
+            "name": "backorders",
+            "type": "select",
+            "instructions": "Show products that allow backorders or not.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No",
+                "notify": "Notify"
+            },
+            "default_value": "no",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -349,5 +392,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1647187888
+    "modified": 1647255666
 }
