@@ -38,7 +38,7 @@ if(have_rows('link_boxes_1')):
         $title = get_sub_field('link_boxes_1_title');
 
 		// If values exist
-		if( !empty($img) && !empty($url) && !empty($title)): ?>
+		if( !empty($img) && !empty($url) ): ?>
 
 		<style>
 			#<?php echo esc_attr($id); ?>.gcb-horizontal-draggable-link-cards-1 a.card<?php echo $i; ?> {
@@ -51,7 +51,7 @@ if(have_rows('link_boxes_1')):
 			}
 		</style>
 		<a href="<?php echo $url; ?>" class="box card<?php echo $i; ?>">
-			<p class="title"><?php echo $title; ?></p>
+			<?php if(!empty($title)) ?> <p class="title"><?php echo $title; ?></p>
 		</a>
 
 		<?php
