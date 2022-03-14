@@ -37,6 +37,9 @@ $stock_status = get_field('stock_status');
 // Check if values are set
 $values_exist = false;
 switch ($show_criteria) {
+	case 'none':
+		$values_exist = true;
+		break;
 	case 'sku':
 		if (!empty($sku)) $values_exist = true;
 		break;
@@ -62,32 +65,34 @@ if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
 
     // https://github.com/woocommerce/woocommerce/wiki/wc_get_products-and-WC_Product_Query
     $args = array(
-        'limit'			=> intval($count),
-	'visibility'		=> 'visible',
-        'return'		=> 'ids',
+		'limit'			=> intval($count),
+		'visibility'	=> 'visible',
+		'return'		=> 'ids',
     );
 
-	switch ($show_criteria) {
-		case 'sku':
-			$args['sku'] = strval($sku);
-			break;
-		case 'tag':
-			$tag = explode(",", strval($tag));
-			$args['tag'] = $tag;
-			break;
-		case 'category':
-			$cat = explode(",", strval($cat));
-			$args['category'] = $cat;
-			break;
-		case 'weight':
-			$args['weight'] = floatval($weight);
-			break;
-		case 'price':
-			$args['price'] = floatval($price);
-			break;
-		case 'total_sales':
-			$args['total_sales'] = intval($t_sales);
-			break;
+	if ($show_criteria != 'none'){
+		switch ($show_criteria) {
+			case 'sku':
+				$args['sku'] = strval($sku);
+				break;
+			case 'tag':
+				$tag = explode(",", strval($tag));
+				$args['tag'] = $tag;
+				break;
+			case 'category':
+				$cat = explode(",", strval($cat));
+				$args['category'] = $cat;
+				break;
+			case 'weight':
+				$args['weight'] = floatval($weight);
+				break;
+			case 'price':
+				$args['price'] = floatval($price);
+				break;
+			case 'total_sales':
+				$args['total_sales'] = intval($t_sales);
+				break;
+		}
 	}
 
 	// Extras
