@@ -36,7 +36,7 @@ if (empty($img) || empty($url) || empty($card_clr)) return;
 
 // Parse HTML ?>
 <a href="<?php $url; ?>" class="<?php echo esc_attr($id); ?> <?php echo esc_attr($className); ?>" role="link" style="--gcb-bsc-img-t-link: <?php echo $card_clr; ?>">
-	<?php wp_get_attachment_image( $img, 'thumbnail' ); ?>
+	<?php echo wp_get_attachment_image( $img, 'thumbnail' ); ?>
 	<?php if (!empty($title) && !empty($text_clr)): ?>
 	<p class="title" style="--gcb-bsc-img-t-link: <?php echo $text_clr; ?>">
 		<?php echo $title; ?>
