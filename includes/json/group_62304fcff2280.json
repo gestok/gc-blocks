@@ -1,0 +1,250 @@
+{
+    "key": "group_62304fcff2280",
+    "title": "Basic\/Link\/Image-Title-Card",
+    "fields": [
+        {
+            "key": "field_62304fefdce46",
+            "label": "Information",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6230502bdce47",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Set the title that will be displayed on the card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6230505fdce48",
+            "label": "URL",
+            "name": "url",
+            "type": "url",
+            "instructions": "Set the URL that this card will direct to.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_62305082dce49",
+            "label": "Image",
+            "name": "img",
+            "type": "image",
+            "instructions": "Set the image that will be displayed in the card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 1,
+            "mime_types": ""
+        },
+        {
+            "key": "field_62305118dce4a",
+            "label": "Style",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62305128dce4b",
+            "label": "Card Color",
+            "name": "card_clr",
+            "type": "color_picker",
+            "instructions": "Set the background color of the card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_62305172dce4c",
+            "label": "Text Color",
+            "name": "text_clr",
+            "type": "color_picker",
+            "instructions": "Set the color of the text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#222222",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_623051a3dce4d",
+            "label": "Layout",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6230520fdce4f",
+            "label": "Width",
+            "name": "width",
+            "type": "number",
+            "instructions": "Set the width of the whole card element (in pixels).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_623051b4dce4e",
+            "label": "Height",
+            "name": "height",
+            "type": "number",
+            "instructions": "Set the height of the whole card element (in pixels).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_62305239dce50",
+            "label": "Image Width",
+            "name": "img_w",
+            "type": "number",
+            "instructions": "Set the width of the image (in pixels).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_62305288dce51",
+            "label": "Image Height",
+            "name": "img_h",
+            "type": "number",
+            "instructions": "Set the height of the image (in pixels).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/gcb-b-l-img-title-card"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1647334165
+}

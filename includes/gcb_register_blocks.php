@@ -95,7 +95,7 @@ function gcb_register_blocks() {
 		],
 	));
 	
-	// Simple Category Product Carousel
+	// (WooCommerce) Simple Category Product Carousel
 	acf_register_block_type( array(
 		'name'				=> 'smpl-cat-prd-crsl',
 		'title'				=> __( 'Simple Category Product Carousel', 'smpl-cat-prd-crsl' ),
@@ -114,6 +114,40 @@ function gcb_register_blocks() {
 				'name' => 'default',
 				'label' => __('Default', 'default'),
 				'isDefault' => true,
+			],
+		],
+	));
+
+	// (Basic/Link) Image Title Card
+	acf_register_block_type( array(
+		'name'				=> 'gcb-b-l-img-title-card',
+		'title'				=> __( 'Image Title Card', 'gcb-b-l-img-title-card' ),
+		'description'		=> __('Basic block of an animated card with an image and title.'),
+		'render_template'	=> plugin_dir_path(__FILE__) . 'blocks/basic/link/image-title-card.php',
+		'enqueue_assets'	=> function(){
+			wp_enqueue_style( 'smpl-cat-prd-crsl-css', plugin_dir_url(__FILE__) . 'blocks/basic/link/image-title-card.css');
+		},
+		'category'			=> 'gc-blocks',
+		'icon'				=> 'admin-users',
+		'mode'				=> 'edit',
+		'keywords'			=> array( 'card', 'link', 'image' ),
+		'example'			=> array(
+			'attributes' => array(
+				'mode' => 'preview',
+				'data' => array(
+					'preview_image_help' => plugin_dir_url(__FILE__) . 'blocks/basic/link/preview.jpg',
+					)
+				)
+		),
+		'styles'			=> [
+			[
+				'name' => 'default',
+				'label' => __('Default', 'default'),
+				'isDefault' => true,
+			],
+			[
+				'name' => 'square',
+				'label' => __('Square', 'square'),
 			],
 		],
 	));
