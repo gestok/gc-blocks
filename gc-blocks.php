@@ -59,6 +59,7 @@ add_filter('acf/settings/load_json', 'add_acf_json_load_folder');
 // Core Functions
 include(plugin_dir_path(__FILE__) . 'includes/core/gcb_enqueue_block_editor_assets.php');
 include(plugin_dir_path(__FILE__) . 'includes/core/gcb_json_sync.php');
+include( GC_BLOCKS . 'includes/core/gcb_styles.php');
 // Register New Block Category
 include(plugin_dir_path(__FILE__) . 'includes/core/gcb_block_category.php');
 // Register Blocks, JS and CSS
