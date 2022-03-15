@@ -25,12 +25,17 @@
   border-bottom: solid 2px #0004;
 }
 
+.gcb-img-title-card:hover img {
+  box-shadow: -3px 3px 0px 0 #0005;
+}
+
 .gcb-img-title-card img {
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: -3px 3px 0px 0 #0005;
+  box-shadow: 0px 0px 0px 0 #0005;
+  transition: all .4s ease;
 }
 
 .gcb-img-title-card .title {
