@@ -9,6 +9,9 @@
   width: var(--card-width);
   min-width: var(--card-width);
   border-radius: 15px;
+  border-right: solid 0px #0000;
+  border-left: solid 3px #0004;
+  border-bottom: solid 9px #0004;
   box-shadow: 0 0.5rem 1rem -0.5rem #0005, -1rem -1rem 3rem -1rem #0005 inset;
   transform: matrix(0.7, -.1, .2, .5, 0, 15);
   transition: all .4s ease;
@@ -16,7 +19,10 @@
 
 .gcb-img-title-card:hover {
   box-shadow: 0 2rem 1.5rem -1rem #0005, 6rem 6rem 6rem -6rem #fff2 inset;
-  transform: matrix(1, -0.1, 0.1, 1, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  border-right: solid 4px #0004;
+  border-left: solid 0px #0000;
+  border-bottom: solid 2px #0004;
 }
 
 .gcb-img-title-card img {
