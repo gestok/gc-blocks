@@ -3,7 +3,7 @@
 // Add Scroll Functionality for every wrapper
 function simpleCatProdCarousel() {
     // Get Product Carousel Wrappers
-    const wrappers = document.querySelectorAll(".gcb-smpl-cat-prd-crsl");
+    const wrappers = document.querySelectorAll(".gcb-product-carousel");
 
     wrappers.forEach(wrapper => {
         // Get wrapper's slider

@@ -233,7 +233,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/gcb-b-l-img-title-card"
+                "value": "acf\/gcb-img-title-card"
             }
         ]
     ],
@@ -246,5 +246,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1647334165
+    "modified": 1647343364
 }

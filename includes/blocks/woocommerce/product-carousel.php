@@ -9,12 +9,12 @@
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 // Create unique ID
-$id = 'gcb-smpl-cat-prd-crsl-' . $block['id'];
+$id = 'gcb-product-carousel-' . $block['id'];
 if(!empty($block['anchor'])) $id = $block['anchor'];
 
 
 // Create Class attributes
-$className = 'gcb-smpl-cat-prd-crsl';
+$className = 'gcb-product-carousel';
 if(!empty($block['className'])) $className .= ' ' . $block['className'];
 if(!empty($block['align'])) $className .= ' align' . $block['align'];
 
@@ -33,6 +33,8 @@ $order_by = get_field('order_by');
 $order = get_field('order');
 $stock_status = get_field('stock_status');
 $backorders = get_field('backorders');
+$item_bg = get_field('item_bg');
+$text_clr = get_field('text_clr');
 
 
 // Check if values are set
@@ -129,10 +131,10 @@ if ($values_exist && is_plugin_active('woocommerce/woocommerce.php')){
 				// Get object of product
 				$product = wc_get_product($product_id); ?>
 				<div class="product-box">
-					<a class="product" href="<?php echo get_permalink($product->get_id()); ?>" role="link" title="product">
+					<a class="product" href="<?php echo get_permalink($product->get_id()); ?>" role="link" title="product" style="--item-bg: <?php echo $item_bg; ?>;">
 						<?php echo $product->get_image(); ?>
-						<p class="title"><?php echo $product->get_name(); ?></p>
-						<p class="price"><?php echo sprintf('%.2f', round($product->get_price(), 2)); ?>€</p>
+						<p class="title" style="--text-clr: <?php echo $text_clr; ?>;"><?php echo $product->get_name(); ?></p>
+						<p class="price" style="--text-clr: <?php echo $text_clr; ?>;"><?php echo sprintf('%.2f', round($product->get_price(), 2)); ?>€</p>
 					</a>
 					<a href="/?add-to-cart=<?php echo $product_id; ?>" class="cart-btn" role="link" title="Add to Cart">
 						<svg xmlns="http://www.w3.org/2000/svg">

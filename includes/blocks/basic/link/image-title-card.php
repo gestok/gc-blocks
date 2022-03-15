@@ -28,17 +28,19 @@ $img = get_field('img');
 $title = get_field('title');
 $card_clr = get_field('card_clr');
 $text_clr = get_field('text_clr');
+$card_width = get_field('width');
+$card_height = get_field('height');
 
 
 // Check that required values are set
-if (empty($img) || empty($url) || empty($card_clr)) return;
+if (empty($img) || empty($url) || empty($card_clr) || empty($card_width) || empty($card_height)) return;
 
 
 // Parse HTML ?>
-<a href="<?php echo $url; ?>" class="<?php echo esc_attr($id); ?> <?php echo esc_attr($className); ?>" role="link" style="--gcb-bsc-img-t-link: <?php echo $card_clr; ?>">
+<a href="<?php echo $url; ?>" class="<?php echo esc_attr($id); ?> <?php echo esc_attr($className); ?>" role="link" style="--card-clr: <?php echo $card_clr; ?>; --card-width: <?php echo $card_width; ?>px; --card-height: <?php echo $card_height; ?>px;">
 	<?php echo wp_get_attachment_image( $img, 'thumbnail' ); ?>
 	<?php if (!empty($title) && !empty($text_clr)): ?>
-	<p class="title" style="--gcb-bsc-img-t-link: <?php echo $text_clr; ?>">
+	<p class="title" style="--text-clr: <?php echo $text_clr; ?>">
 		<?php echo $title; ?>
 	</p>
 	<?php endif; ?>

@@ -95,20 +95,20 @@ function gcb_register_blocks() {
 		],
 	));
 	
-	// (WooCommerce) Simple Category Product Carousel
+	// (WooCommerce) Product Carousel
 	acf_register_block_type( array(
-		'name'				=> 'smpl-cat-prd-crsl',
-		'title'				=> __( 'Simple Category Product Carousel', 'smpl-cat-prd-crsl' ),
-		'description'		=> __('Simple product carousel that displays products from a specific category.'),
-		'render_template'	=> plugin_dir_path(__FILE__) . 'blocks/woocommerce/smpl-cat-prd-crsl.php',
+		'name'				=> 'gcb-product-carousel',
+		'title'				=> __( 'Product Carousel', 'gcb-product-carousel' ),
+		'description'		=> __('Simple product carousel that displays products through a customized query.'),
+		'render_template'	=> plugin_dir_path(__FILE__) . 'blocks/woocommerce/product-carousel.php',
 		'enqueue_assets'	=> function(){
-			wp_enqueue_style( 'smpl-cat-prd-crsl-css', plugin_dir_url(__FILE__) . 'blocks/woocommerce/smpl-cat-prd-crsl.css');
-			wp_enqueue_script('smpl-cat-prd-crsl-js', plugin_dir_url(__FILE__) . 'blocks/woocommerce/smpl-cat-prd-crsl.js');
+			wp_enqueue_style( 'gcb-product-carousel-css', plugin_dir_url(__FILE__) . 'blocks/woocommerce/product-carousel.css');
+			wp_enqueue_script('gcb-product-carousel-js', plugin_dir_url(__FILE__) . 'blocks/woocommerce/product-carousel.js');
 		},
 		'category'			=> 'gc-blocks',
 		'icon'				=> 'admin-users',
 		'mode'				=> 'edit',
-		'keywords'			=> array( 'products', 'carousel', 'category' ),
+		'keywords'			=> array( 'products', 'carousel', 'woocommerce' ),
 		'styles'			=> [
 			[
 				'name' => 'default',
@@ -120,12 +120,12 @@ function gcb_register_blocks() {
 
 	// (Basic/Link) Image Title Card
 	acf_register_block_type( array(
-		'name'				=> 'gcb-b-l-img-title-card',
-		'title'				=> __( 'Image Title Card', 'gcb-b-l-img-title-card' ),
+		'name'				=> 'gcb-img-title-card',
+		'title'				=> __( 'Image Title Card', 'gcb-img-title-card' ),
 		'description'		=> __('Basic block of an animated card with an image and title.'),
 		'render_template'	=> plugin_dir_path(__FILE__) . 'blocks/basic/link/image-title-card.php',
 		'enqueue_assets'	=> function(){
-			wp_enqueue_style( 'gcb-b-l-img-title-card-css', plugin_dir_url(__FILE__) . 'blocks/basic/link/image-title-card.css');
+			wp_enqueue_style( 'gcb-img-title-card-css', plugin_dir_url(__FILE__) . 'blocks/basic/link/image-title-card.css');
 		},
 		'category'			=> 'gc-blocks',
 		'icon'				=> 'admin-users',

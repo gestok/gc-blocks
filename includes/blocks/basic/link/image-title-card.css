@@ -1,44 +1,44 @@
 /* Default */
 .gcb-b-l-img-title-card {
-    text-decoration: none;
-    padding: 1rem;
-    display: inline-grid;
-    justify-items: center;
-    background: var(--gcb-bsc-img-t-link);
-    min-height: 260px;
-    min-width: 180px;
-    max-width: 180px;
-    border-radius: 15px;
-    box-shadow: 0 0.5rem 1rem -0.5rem #0005, -1rem -1rem 3rem -1rem #0005 inset;
-    transform: matrix(0.7, -.1, .2, .5, 0, 15);
-    transition: all .4s ease;
-  }
-  
-  .gcb-b-l-img-title-card:hover {
-    box-shadow: 0 2rem 1.5rem -1rem #0005, 6rem 6rem 6rem -6rem #fff2 inset;
-    transform: matrix(1, -0.1, 0.1, 1, 0, 0);
-  }
-  
-  .gcb-b-l-img-title-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: -3px 3px 0px 0 #0005;
-  }
-  
-  .gcb-b-l-img-title-card .title {
-    color: var(--gcb-bsc-img-t-link);
-    font-style: oblique;
-    text-align: center;
-    align-self: center;
-  }
-  
-  /* Square */
-  .gcb-b-l-img-title-card.is-style-square {
-    border-radius: 3px;
-  }
-  
-  .gcb-b-l-img-title-card.is-style-square img {
-    border-radius: 3px;
-  }
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-grid;
+  justify-items: center;
+  background: var(--card-clr);
+  height: var(--card-height);
+  width: var(--card-width);
+  min-width: var(--card-width);
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem -0.5rem #0005, -1rem -1rem 3rem -1rem #0005 inset;
+  transform: matrix(0.7, -.1, .2, .5, 0, 15);
+  transition: all .4s ease;
+}
+
+.gcb-b-l-img-title-card:hover {
+  box-shadow: 0 2rem 1.5rem -1rem #0005, 6rem 6rem 6rem -6rem #fff2 inset;
+  transform: matrix(1, -0.1, 0.1, 1, 0, 0);
+}
+
+.gcb-b-l-img-title-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: -3px 3px 0px 0 #0005;
+}
+
+.gcb-b-l-img-title-card .title {
+  color: var(--text-clr);
+  font-style: oblique;
+  text-align: center;
+  align-self: center;
+}
+
+/* Square */
+.gcb-b-l-img-title-card.is-style-square {
+  border-radius: 3px;
+}
+
+.gcb-b-l-img-title-card.is-style-square img {
+  border-radius: 3px;
+}

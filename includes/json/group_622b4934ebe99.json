@@ -1,6 +1,6 @@
 {
     "key": "group_622b4934ebe99",
-    "title": "Simple Category Product Carousel",
+    "title": "WooCommerce\/Product-Carousel",
     "fields": [
         {
             "key": "field_622b494fdb901",
@@ -372,6 +372,56 @@
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_623073d3f0918",
+            "label": "Style",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_623073dff0919",
+            "label": "Product Background Color",
+            "name": "item_bg",
+            "type": "color_picker",
+            "instructions": "Set the background color of the carousel items.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_62307436f091a",
+            "label": "Text Color",
+            "name": "text_clr",
+            "type": "color_picker",
+            "instructions": "Set the color of the text of the carousel items.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#222222",
+            "enable_opacity": 0,
+            "return_format": "string"
         }
     ],
     "location": [
@@ -379,7 +429,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/smpl-cat-prd-crsl"
+                "value": "acf\/gcb-product-carousel"
             }
         ]
     ],
@@ -392,5 +442,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1647255666
+    "modified": 1647343352
 }

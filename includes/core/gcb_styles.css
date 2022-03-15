@@ -1,3 +1,44 @@
-/* Scroller: Set X-Axis overflow scroll on small screens */
-.scroller {overflow-x: scroll;}
-.scroller::-webkit-scrollbar {height: 0px;width: 0px;}
+/* Scroller: Set X-Axis overflow scroll on medium-small screens */
+@media screen and (max-width: 1200px){
+    .scroller {overflow-x: scroll;}
+    .scroller::-webkit-scrollbar {height: 0px;width: 0px;}
+}
+
+/* Paddings: Set different paddings */
+/* General */
+.p1 {padding: 10px;}
+.p2 {padding: 20px;}
+.p3 {padding: 30px;}
+.p4 {padding: 40px;}
+.p1r {padding: 1rem;}
+.p1hr {padding: 1.5rem;}
+.p2r {padding: 2rem;}
+.p2hr {padding: 2.5rem;}
+/* Bottom */
+.pb1 {padding-bottom: 10px;}
+.pb2 {padding-bottom: 20px;}
+.pb3 {padding-bottom: 30px;}
+.pb4 {padding-bottom: 40px;}
+.pb1r {padding-bottom: 1rem;}
+.pb1hr {padding-bottom: 1.5rem;}
+.pb2r {padding-bottom: 2rem;}
+.pb2hr {padding-bottom: 2.5rem;}
+/* Top */
+.pt1 {padding-top: 10px;}
+.pt2 {padding-top: 20px;}
+.pt3 {padding-top: 30px;}
+.pt4 {padding-top: 40px;}
+.pt1r {padding-top: 1rem;}
+.pt1hr {padding-top: 1.5rem;}
+.pt2r {padding-top: 2rem;}
+.pt2hr {padding-top: 2.5rem;}
+
+/* Margins: Set different margins */
+.m1 {margin: 10px;}
+.m2 {margin: 20px;}
+.m3 {margin: 30px;}
+.m4 {margin: 40px;}
+.m1r {margin: 1rem;}
+.m1hr {margin: 1.5rem;}
+.m2r {margin: 2rem;}
+.m2hr {margin: 2.5rem;}
