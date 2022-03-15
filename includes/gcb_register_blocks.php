@@ -125,7 +125,7 @@ function gcb_register_blocks() {
 		'description'		=> __('Basic block of an animated card with an image and title.'),
 		'render_template'	=> plugin_dir_path(__FILE__) . 'blocks/basic/link/image-title-card.php',
 		'enqueue_assets'	=> function(){
-			wp_enqueue_style( 'smpl-cat-prd-crsl-css', plugin_dir_url(__FILE__) . 'blocks/basic/link/image-title-card.css');
+			wp_enqueue_style( 'gcb-b-l-img-title-card-css', plugin_dir_url(__FILE__) . 'blocks/basic/link/image-title-card.css');
 		},
 		'category'			=> 'gc-blocks',
 		'icon'				=> 'admin-users',
