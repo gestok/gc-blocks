@@ -51,7 +51,9 @@ if(have_rows('link_boxes_1')):
 			}
 		</style>
 		<a href="<?php echo $url; ?>" class="box card<?php echo $i; ?>">
-			<?php if(!empty($title)) ?> <p class="title"><?php echo $title; ?></p>
+			<?php if(!empty($title)): ?>
+			<p class="title"><?php echo $title; ?></p>
+			<?php endif; ?>
 		</a>
 
 		<?php

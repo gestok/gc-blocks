@@ -8,12 +8,12 @@
 
 
 // Create unique ID
-$id = 'gcb-b-l-img-title-card-' . $block['id'];
+$id = 'gcb-img-title-card-' . $block['id'];
 if(!empty($block['anchor'])) $id = $block['anchor'];
 
 
 // Create Class attributes
-$className = 'gcb-b-l-img-title-card';
+$className = 'gcb-img-title-card';
 if(!empty($block['className'])) $className .= ' ' . $block['className'];
 if(!empty($block['align'])) $className .= ' align' . $block['align'];
 
