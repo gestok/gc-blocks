@@ -10,9 +10,8 @@
  * Author URI: https://georgechond.com/
  */
 
-if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-define( 'GC_BLOCKS', plugin_dir_path( __FILE__ ));
+defined('ABSPATH') || exit; // Exit if accessed directly
+define('GC_BLOCKS', plugin_dir_path( __FILE__ ));
 
 // Check if ACF Classes exists
 if (!class_exists('acf_pro') || !class_exists('acf')){
@@ -57,18 +56,18 @@ add_filter('acf/settings/load_json', 'add_acf_json_load_folder');
 
 
 // Core Functions
-include(plugin_dir_path(__FILE__) . 'includes/core/gcb_enqueue_block_editor_assets.php');
-include(plugin_dir_path(__FILE__) . 'includes/core/gcb_json_sync.php');
+include( GC_BLOCKS . 'includes/core/gcb_enqueue_block_editor_assets.php');
+include( GC_BLOCKS . 'includes/core/gcb_json_sync.php');
 include( GC_BLOCKS . 'includes/core/gcb_styles.php');
 // Register New Block Category
-include(plugin_dir_path(__FILE__) . 'includes/core/gcb_block_category.php');
+include( GC_BLOCKS . 'includes/core/gcb_block_category.php');
 // Register Blocks, JS and CSS
-include(plugin_dir_path(__FILE__) . 'includes/gcb_register_blocks.php');
-include(plugin_dir_path(__FILE__) . 'includes/gcb_register_scripts.php');
+include( GC_BLOCKS . 'includes/gcb_register_blocks.php');
+include( GC_BLOCKS . 'includes/gcb_register_scripts.php');
 
 
 // Auto-Update from Git Repo
-require(plugin_dir_path(__FILE__) . 'includes/plugin-update-checker/plugin-update-checker.php');
+require( GC_BLOCKS . 'includes/plugin-update-checker/plugin-update-checker.php');
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/gestok/gc-blocks',
 	__FILE__,
