@@ -84,7 +84,7 @@
 .gcb-product-carousel .product p {
     color: var(--text-clr);
     max-height: 20px;
-    margin: 10px 0 0 2px;
+    margin: 8px 0 0 2px;
     font-size: 14px;
     line-height: 1.4;
     overflow: hidden;
@@ -92,7 +92,9 @@
 
 .gcb-product-carousel .product p.price {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 20px;
+    margin: 0;
+    max-height: 100%;
 }
 
 .gcb-product-carousel .ctrl-btn {
